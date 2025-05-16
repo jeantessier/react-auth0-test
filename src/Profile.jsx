@@ -15,17 +15,17 @@ const Profile = () => {
 			scope: "read:current_user",
 		    },
 		})
-		
+
 		const userDetailsByIdUrl = `${import.meta.env.VITE_AUTH0_AUDIENCE}users/${user.sub}`
-		
+
 		const metadataResponse = await fetch(userDetailsByIdUrl, {
 		    headers: {
 			Authorization: `Bearer ${accessToken}`,
 		    },
 		})
-		
+
 		const { user_metadata } = await metadataResponse.json()
-		
+
 		setUserMetadata(user_metadata)
 	    } catch (e) {
 		console.log(e.message)
@@ -34,7 +34,7 @@ const Profile = () => {
 
 	getUserMetadata()
     }, [getAccessTokenSilently, user?.sub])
-    
+
     return (
 	isAuthenticated && (
 	    <div>
