@@ -1,13 +1,17 @@
 import LoginButton from './LoginButton'
 import LogoutButton from './LogoutButton'
+import Profile from './Profile'
 import './App.css'
 
 function App() {
     return (
 	<>
 	    <h1>React Auth0 Test</h1>
-	    <LoginButton/>
-	    <LogoutButton/>
+	    <div>
+		<LoginButton/>
+		<LogoutButton/>
+	    </div>
+	    <Profile/>
 	</>
     )
 }
