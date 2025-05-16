@@ -5,7 +5,11 @@ import Profile from './Profile'
 import './App.css'
 
 function App() {
-    const { isAuthenticated } = useAuth0()
+    const { isAuthenticated, isLoading } = useAuth0()
+
+    if (isLoading) {
+	return <div>Loading ...</div>;
+    }
 
     return (
 	<>
