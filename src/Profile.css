@@ -1,3 +1,16 @@
-pre {
+.profile {
+    display: grid;
+    justify-items: center;
+    margin: 1rem 0rem;
+}
+
+.profile pre {
+    background-color: lightgrey;
     text-align: left;
+    width: max-content;
+    margin: 0rem;
+}
+
+.profile p {
+    margin: 0rem;
 }
