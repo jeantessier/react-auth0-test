@@ -16,7 +16,7 @@ const Profile = () => {
                     },
                 })
 
-                const userDetailsByIdUrl = `${import.meta.env.VITE_AUTH0_AUDIENCE}users/${user.sub}`
+                const userDetailsByIdUrl = `https://${import.meta.env.VITE_AUTH0_DOMAIN}/api/v2/users/${user.sub}`
 
                 const metadataResponse = await fetch(userDetailsByIdUrl, {
                     headers: {
