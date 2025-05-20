@@ -11,7 +11,7 @@ const Profile = () => {
             try {
                 const accessToken = await getAccessTokenSilently({
                     authorizationParams: {
-                        audience: import.meta.env.VITE_AUTH0_AUDIENCE,
+                        audience: import.meta.env.VITE_AUTH0_MANAGEMENT_API_AUDIENCE,
                         scope: "read:current_user",
                     },
                 })
